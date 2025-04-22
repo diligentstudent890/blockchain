@@ -75,7 +75,8 @@ public class BlockChain {
     public void append(Block newBlock) {
         Hash expectedPrevHash = last.block.getHash();
         if (!expectedPrevHash.equals(newBlock.getPrevHash())) {
-            throw new IllegalArgumentException("Block's prevHash does not match the last block's hash!");
+            throw new IllegalArgumentException("Block's prevHash does
+            not match the last block's hash!");
         }
         Node newNode = new Node(newBlock);
         last.next = newNode;

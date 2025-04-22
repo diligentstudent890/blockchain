@@ -55,7 +55,9 @@ public class Hash {
      */
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
+        if (this == other) {
+            return true;
+        }
         if (!(other instanceof Hash)) return false;
         Hash o = (Hash) other;
         return Arrays.equals(this.data, o.data);
